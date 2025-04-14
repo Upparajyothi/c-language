@@ -1,0 +1,39 @@
+
+#include<stdio.h>
+void fun(int a[]);
+int n;
+
+main()
+{
+	int a[100],i;
+	printf("enter no of element");
+	scanf("%d",&n);
+	printf("enter  element ");
+	for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+    fun(a);
+    
+}
+void fun(int a[])
+{
+int i,j,temp;
+for(i=0;i<n-1;i++)
+{
+
+for(j=i+1;j<n;j++)
+{
+
+	if (a[i]<a[j])
+	{
+		temp=a[i];
+		a[i]=a[j];
+		a[j]=temp;
+	}
+}
+}
+	for(i=0;i<n;i++)
+	printf("%d ",a[i]);
+}
+
+	
+
